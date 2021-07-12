@@ -1,0 +1,8 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbit_user
+    password: rabbit_password
+  application:
+    name: backend-for-frontend
