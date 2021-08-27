@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbit_user
+    password: rabbit_password
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: request-filter-service
+
