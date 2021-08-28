@@ -10,20 +10,18 @@ import static com.igorivkin.creditconveyor.requestfilterservice.config.RabbitMQC
 
 @Slf4j
 @Service
-public class InitialQueueProcessorService {
+public class InitialQueueListenerService {
 
     private final RequestProcessingService requestProcessingService;
 
     @Autowired
-    public InitialQueueProcessorService(RequestProcessingService requestProcessingService) {
+    public InitialQueueListenerService(RequestProcessingService requestProcessingService) {
         this.requestProcessingService = requestProcessingService;
     }
 
     @RabbitListener(queues = NEW_REQUESTS_QUEUE)
     public void processCreditRequests(CreditRequest request) {
         log.info("New credit request incoming: {}", request);
-
-        // На текущий момент просто отклоняем все заявки
-        requestProcessingService.rejectRequest(request);
+        requestProcessingService.processRequest(request);
     }
 }

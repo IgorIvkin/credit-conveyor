@@ -13,3 +13,7 @@ spring:
   application:
     name: request-filter-service
 
+services:
+  agreement-generator:
+    host: http://localhost:8082
+

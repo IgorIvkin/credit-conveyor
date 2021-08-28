@@ -15,7 +15,9 @@ public class CreditRequest implements Serializable {
     private UUID uuid;
     private String name;
     private Integer age;
-    private Long requestedAmount = 0L;
+    private Long requestedAmount;
+    private Long salary;
+    private Integer months;
 
     @Override
     public boolean equals(Object o) {
@@ -25,12 +27,14 @@ public class CreditRequest implements Serializable {
         return Objects.equals(uuid, that.uuid)
                 && Objects.equals(name, that.name)
                 && Objects.equals(age, that.age)
-                && Objects.equals(requestedAmount, that.requestedAmount);
+                && Objects.equals(requestedAmount, that.requestedAmount)
+                && Objects.equals(salary, that.salary)
+                && Objects.equals(months, that.months);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(uuid, name, age, requestedAmount);
+        return Objects.hash(uuid, name, age, requestedAmount, salary, months);
     }
 
     @Override
@@ -40,6 +44,8 @@ public class CreditRequest implements Serializable {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", requestedAmount=" + requestedAmount +
+                ", salary=" + salary +
+                ", months=" + months +
                 '}';
     }
 }

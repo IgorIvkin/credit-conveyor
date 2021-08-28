@@ -16,5 +16,10 @@ import java.util.UUID;
 public class RequestResult implements Serializable {
     @Id
     private UUID uuid;
+
     private RequestResultType result;
+
+    private Long approvedAmount;
+
+    private String filename;
 }

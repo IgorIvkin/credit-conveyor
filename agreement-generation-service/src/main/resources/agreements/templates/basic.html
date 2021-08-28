@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, serif;
+            font-size: 16px;
+        }
+        .right {
+            text-align: right;
+        }
+        .center {
+            text-align: center;
+            margin: 20px 0 50px 0;
+        }
+        table.conditions td {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    СОГЛАШЕНИЕ О ПРЕДОСТАВЛЕНИИ УСЛУГ ЗАЙМА
+</div>
+
+<div>
+    <p>
+        Кредит предоставляется единовременно в безналичной форме путем перечисления денежных
+        средств на Счет. Датой фактического предоставления Кредита является дата зачисления денежных средств на Счет.
+    </p>
+</div>
+<h3>Информация о договоре</h3>
+<table class="conditions">
+    <tr>
+        <th>Поле</th>
+        <th>Значение</th>
+    </tr>
+    <tr>
+        <td>Номер договора</td>
+        <td>${uuid}</td>
+    </tr>
+    <tr>
+        <td>ФИО</td>
+        <td>${username}</td>
+    </tr>
+    <tr>
+        <td>Одобренная сумма</td>
+        <td>${approvedAmount}</td>
+    </tr>
+    <tr>
+        <td>Срок (в месяцах)</td>
+        <td>${months}</td>
+    </tr>
+</table>
+</body>
+</html>

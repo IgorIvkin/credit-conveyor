@@ -1,10 +1,10 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.3'
+	id 'org.springframework.boot' version '2.5.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.igorivkin'
+group = 'com.igorivkin.creditconveyor'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -19,13 +19,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-amqp'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.itextpdf:itextpdf:5.5.13.2'
+	implementation 'com.itextpdf.tool:xmlworker:5.5.13.2'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.amqp:spring-rabbit-test'
 }
 
 test {
